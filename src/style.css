@@ -1,3 +1,38 @@
+:root {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 div {
     border: 1px solid red;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px 15px;
+    font-size: 20px;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: black;
+}
+
+#nav-bar .current-page {
+    text-decoration: underline;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
