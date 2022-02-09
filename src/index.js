@@ -23,6 +23,7 @@ const domBuilder = (() => {
     container.appendChild(footer);
 
     buildNavMenu();
+    buildFooter();
   };
 
   const buildNavMenu = () => {
@@ -54,6 +55,12 @@ const domBuilder = (() => {
     navBar.appendChild(logo);
     navBar.appendChild(ul);
   }
+
+  const buildFooter = () => {
+    const footerDiv = document.querySelector('#footer');
+
+    footerDiv.textContent = 'Copyright © 2022 Gabriel Peterson';
+  };
 
   const fillContent = () => {
     // todo
