@@ -62,11 +62,48 @@ const domBuilder = (() => {
     footerDiv.textContent = 'Copyright © 2022 Gabriel Peterson';
   };
 
-  const fillContent = () => {
-    // todo
-  }
-
   return { buildSkeleton };
 })();
 
+const addContent = (() => {
+  const identifyCurrentPage = () => {
+    const fullPath = window.location.pathname;
+    const currentPage = fullPath.substring(fullPath.lastIndexOf('/') + 1);
+    return currentPage;
+  };
+
+  const insertContent = () => {
+    switch (identifyCurrentPage()) {
+      case 'index.html':
+        insertIndexContent();
+        break;
+      case 'menu.html':
+        insertMenuContent();
+        break;
+      case 'contact.html':
+        insertContactContent();
+        break;
+      default:
+        console.log('Page content not found');
+        break;
+    }
+  };
+
+  const insertIndexContent = () => {
+    console.log('index is loaded');
+  };
+
+  const insertMenuContent = () => {
+    console.log('menu is loaded');
+  };
+
+  const insertContactContent = () => {
+    console.log('contact is loaded');
+  };
+
+  return { insertContent };
+
+})();
+
 domBuilder.buildSkeleton();
+addContent.insertContent();
