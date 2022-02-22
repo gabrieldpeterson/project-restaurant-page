@@ -1,5 +1,6 @@
 import './style.css';
 import Logo from './logo.png';
+import Leeloo from './leeloo.jpg';
 
 const domBuilder = (() => {
   const buildSkeleton = () => {
@@ -90,7 +91,20 @@ const addContent = (() => {
   };
 
   const insertIndexContent = () => {
-    console.log('index is loaded');
+    const indexContent = document.querySelector('#content');
+
+    const headerLine = document.createElement('h1');
+    headerLine.textContent = 'Best food you have ever eaten';
+
+    const description = document.createElement('p');
+    description.textContent = 'Delicious since 2022';
+
+    const leelooPhoto = new Image();
+    leelooPhoto.src = Leeloo;
+
+    indexContent.appendChild(headerLine);
+    indexContent.appendChild(description);
+    indexContent.appendChild(leelooPhoto);
   };
 
   const insertMenuContent = () => {
