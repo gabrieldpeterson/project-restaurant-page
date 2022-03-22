@@ -108,7 +108,31 @@ const addContent = (() => {
   };
 
   const insertMenuContent = () => {
-    console.log('menu is loaded');
+    const menuContent = document.querySelector('#content');
+
+    const menuHeader = document.createElement('h1');
+    menuHeader.textContent = 'Menu';
+
+    const menuList = document.createElement('ul');
+    menuList.classList.add('menu');
+
+    const menuItems = [
+      'Salmon',
+      'Tuna',
+      'Cream',
+      'Turkey'
+    ];
+
+    menuItems.forEach((item) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = item;
+      menuList.appendChild(listItem);
+    });
+
+    menuContent.appendChild(menuHeader);
+    menuContent.appendChild(menuList);
+
+    console.log('menu is loaded2');
   };
 
   const insertContactContent = () => {
