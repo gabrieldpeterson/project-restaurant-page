@@ -136,6 +136,13 @@ const addContent = (() => {
   };
 
   const insertContactContent = () => {
+    const contactContact = document.querySelector('#content');
+
+    const contactHeader = document.createElement('h1');
+    contactHeader.textContent = 'Contact Us';
+
+    contactContact.appendChild(contactHeader);
+
     console.log('contact is loaded');
   };
 
